@@ -17,6 +17,7 @@
 local Notification = require(game:GetService("ReplicatedStorage").Notification)
 Notification.new("<Color=Yellow> Loading <Nameless Hub> <Color=/>"):Display()
 Notification.new("<Color=Red> Made by tanyeuem<Color=/>"):Display()
+Notification.new("<Color=light pink> CTV Namdz-Tanoccho hihi<Color=/>"):Display()
 Notification.new("<Color=Blue> Discord:https://discord.com/invite/c2eJX9R8EK <Color=/>"):Display()
 -------------------// I Write... \\----------------------------------------
 
@@ -146,7 +147,7 @@ local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
     Title = "Nameless auto chest",
     Text = "By tancucxuc",
-    Icon = "rbxthumb://type=Asset&id=15338990738&w=150&h=150",
+    Icon = "rbxthumb://type=Asset&id=71643263677630&w=150&h=150",
     Duration = math.huge,
     Callback = AllowRunServiceBind,
     Button1 = "Enable",
