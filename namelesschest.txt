@@ -18,7 +18,6 @@ local Notification = require(game:GetService("ReplicatedStorage").Notification)
 Notification.new("<Color=Blue> Loading <Nameless Hub> <Color=/>"):Display()
 Notification.new("<Color=Blue> Made by tanyeuem<Color=/>"):Display()
 Notification.new("<Color=Blue> Discord:https://discord.com/invite/c2eJX9R8EK 
-Notification.new("<Color=Blue> CTV Nam hói-Tanoccho hihi<Color=/>"):Display()
 
 -------------------// I Write... \\----------------------------------------
 
