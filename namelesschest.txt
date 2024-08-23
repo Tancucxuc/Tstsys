@@ -15,12 +15,11 @@
 ]]
 
 local Notification = require(game:GetService("ReplicatedStorage").Notification)
-Notification.new("<Color=Blue> Loading <Nameless Hub> <Color=/>"):Display()
-Notification.new("<Color=Blue> Made by tanyeuem<Color=/>"):Display()
-Notification.new("<Color=Blue> Discord:https://discord.com/invite/c2eJX9R8EK 
-
+Notification.new("<Color=Yellow> Loading <Nameless Hub> <Color=/>"):Display()
+Notification.new("<Color=Red> Made by tanyeuem<Color=/>"):Display()
+Notification.new("<Color=Green> CTV Namdz-Tanoccho<Color=/>"):Display()
+Notification.new("<Color=Blue> Discord:https://discord.com/invite/c2eJX9R8EK <Color=/>"):Display()
 -------------------// I Write... \\----------------------------------------
-
 
 highChestOnly = true
 godsChalicSniper = false
@@ -122,12 +121,12 @@ function AllowRunServiceBind.OnInvoke(args)
     local CoreGui = game:GetService("StarterGui")
     CoreGui:SetCore("SendNotification", {
         Title = "ChestFarm",
-        Text = "By Tancucxuc",
-        Icon = "rbxthumb://type=Asset&id=15338990738&w=150&h=150 ",
+        Text = "By Tbao hub",
+        Icon = "rbxthumb://type=Asset&id=15338990738&w=150&h=150",
         Duration = math.huge,
         Callback = AllowRunServiceBind,
-        Button1 = "on",
-        Button2 = "off",
+        Button1 = "Enable",
+        Button2 = "Disable",
     })
 end
 
@@ -151,8 +150,8 @@ CoreGui:SetCore("SendNotification", {
     Icon = "rbxthumb://type=Asset&id=15338990738&w=150&h=150",
     Duration = math.huge,
     Callback = AllowRunServiceBind,
-    Button1 = "on",
-    Button2 = "off",
+    Button1 = "Enable",
+    Button2 = "Disable",
 })
 task.spawn(function()
     while true and task.wait(.5) do
