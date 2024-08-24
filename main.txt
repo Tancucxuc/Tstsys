@@ -1,3 +1,10 @@
+local Notification = require(game:GetService("ReplicatedStorage").Notification)
+Notification.new("<Color=Yellow> Loading <Nameless Hub> <Color=/>"):Display()
+Notification.new("<Color=Red> Made by tanyeuem<Color=/>"):Display()
+Notification.new("<Color=White> CTV Namdz-Tanoccho hihi<Color=/>"):Display()
+Notification.new("<Color=Blue> Discord:https://discord.com/invite/4wwH5k3h22 <Color=/>"):Display()
+-------------------// I Write... \\----------------------------------------
+
 repeat
     wait()
 until game:IsLoaded()
@@ -2730,7 +2737,7 @@ L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
 sound.Parent = L2
-sound.SoundId = "rbxassetid:// 71643263677630"
+sound.SoundId = "rbxassetid://71643263677630"
 L2.MouseButton1Click:Connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
     sound:Play()
