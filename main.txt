@@ -2732,7 +2732,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.1208, 0, 0.0953, 0)
 L2.Size = UDim2.new(0, 50, 0, 50)
 L2.Font = Enum.Font.LuckiestGuy
-L2.Text = "NameLess\n Premium"
+L2.Text = "rbxassetid://71643263677630"
 L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
@@ -2756,7 +2756,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.359138072, 0, -0.025062656, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "discord.gg/H9q9RuKxqk"
+TextLabel.Text = "Tancucxuc Love Everyone"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 19.000
 
