@@ -2778,8 +2778,20 @@ local Window = Fluent:CreateWindow({
 
 local Tabs = {
 	Settings = Window:AddTab({ Title = "Setting", Icon = "" }),
+    Sh = Window:AddTab({ Title = "Shop", Icon = "" }),
     Main = Window:AddTab({ Title = "Farming", Icon = "" }),
     stack = Window:AddTab({ Title = "Stack Auto Farm", Icon = "" }), 
+    St = Window:AddTab({ Title = "Status and Server", Icon = "" }),    
+    Lc = Window:AddTab({ Title = "Travel-Map", Icon = "" }),  
+    RC = Window:AddTab({ Title = "Upgrade Race", Icon = "" }),
+    Se = Window:AddTab({ Title = "Sea Event", Icon = "" }),   
+    pvp = Window:AddTab({ Title = "Pvp-Visual", Icon = "" }),   
+    cailon = Window:AddTab({ Title = "Mirage + Kitsune", Icon = "" }),   
+    spl = Window:AddTab({ Title = "Player Status", Icon = "" }),   
+    raid = Window:AddTab({ Title = "Dungeon", Icon = "" }),
+    De = Window:AddTab({ Title = "Devil Fruits", Icon = "" }),    
+    Ms = Window:AddTab({ Title = "Misc", Icon = "" }),   
+    support = Window:AddTab({ Title = "Server Support\n Updated Logs", Icon = "" }),
 }
 print("wait tab") 
 
@@ -2839,176 +2851,7 @@ end
 
 print("function first") 
 Tabs.Sh:AddButton({
-        Title = "Redeem All Code",
-        Description = "",
-        Callback = function()            
-function RedeemCode(value)
-            game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(value)
-        end
-        for i,v in pairs(sex) do
-            RedeemCode(v)
-        end
-        end
-    })
-    Tabs.Sh:AddButton({
-        Title = "Teleport Sea 1",
-        Description = "faster teleport to old world with 1 click",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
-        end
-    })
-    Tabs.Sh:AddButton({
-        Title = "Teleport Sea 2",
-        Description = "faster teleport to new world with 1 click",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
-        end
-    })
-    Tabs.Sh:AddButton({
-        Title = "Teleport Sea 3",
-        Description = "faster teleport to third world with 1 click",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
-        end
-    })
-    Tabs.Sh:AddSection("Mele Store") 
-    local melees = {
-    ["Select"] = function() end,
-    ["Black Leg"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
-    end,
-    ["Electro"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
-    end,
-    ["Fishman Karate"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
-    end,
-    ["Dragon Claw"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "1")
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward", "DragonClaw", "2")
-    end,
-    ["Superhuman"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
-    end,
-    ["Death Step"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
-    end,
-    ["Sharkman Karate"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate", true)
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
-    end,
-    ["Electric Claw"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
-    end,
-    ["Dragon Talon"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
-    end,
-    ["Godhuman"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
-    end,
-    ["Sanguine Art"] = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
-    end
-}
-
-local Chon_Melee = Tabs.Sh:AddDropdown("Chon_Melee", {
-    Title = "Buy Fighting Style",
-    Description = "",
-    Values = {"Select", "Black Leg", "Electro", "Fishman Karate", "Dragon Claw", "Superhuman", "Death Step", "Sharkman Karate", "Electric Claw", "Dragon Talon", "Godhuman" },
-    Multi = false,
-    Default = 1,
-})
-Chon_Melee:SetValue("Select")
-Chon_Melee:OnChanged(function(Value)
-    getgenv().FightingStyle = Value
-    if melees[Value] then
-        melees[Value]()
-    end
-end)
-
-    Tabs.Sh:AddSection("Abilities Shop")
-    Tabs.Sh:AddButton({Title = "Buy Sky Jumb", Description = "", Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
-        end
-    })
-    Tabs.Sh:AddButton({Title = "Buy Buso Haki", Description = "", Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
-        end
-    })
-    Tabs.Sh:AddButton({Title = "Buy Observation haki", Description = "", Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
-        end
-    })
-    Tabs.Sh:AddButton({Title = "Buy Soru", Description = "", Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
-        end
-    })
-    Tabs.Sh:AddSection("Maybe Working")
-    Tabs.Sh:AddButton({Title = "Buy Ghoul Race", Description = "", Callback = function()            
-local args = {[1] = "Ectoplasm", [2] = "BuyCheck", [3] = 4}
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-        local args = {[1] = "Ectoplasm", [2] = "Change", [3] = 4}
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-        end
-    })
-    Tabs.Sh:AddButton({
-        Title = "Buy Cyborg Race",
-        Description = "",
-        Callback = function()            
-local args = {[1] = "CyborgTrainer", [2] = "Buy"}
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-        end
-    })
-    Tabs.Sh:AddButton({
-        Title = "Reroll Race",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
-	    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
-        end
-    })
-    Tabs.Sh:AddButton({
-        Title = "Refund Stats",
-        Description = "",
-        Callback = function()            
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
-        end
-    })
-    
-    Toggle = Tabs.Settings:AddToggle("MyToggle", {Title = "Hide Mobs", Description = "invisible monster for have better fps", Default = true })
-    Toggle:OnChanged(function(Value)
-        _G.hadesinvis = Value		
-        saveSettings() 
-    end)
-    spawn(function()
-    while wait() do
-        if _G.hadesinvis then
-            pcall(function()
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.ClassName == "MeshPart" then
-                        v.Transparency = 1
-                    end
-                end
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.Name == "Head" then
-                        v.Transparency = 1
-                    end
-                end
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.ClassName == "Accessory" then
-                        v.Handle.Transparency = 1
-                    end
-                end
-                for i, v in pairs(game:GetService("Workspace").Enemies:GetDescendants()) do
-                    if v.ClassName == "Decal" then
-                        v.Transparency = 1
-                    end
-                end
-            end)
-        end
-    end
-end)
+        
 
     local Dropdown = Tabs.Settings:AddDropdown("Dropdown", {
     Title = "Weapon",
