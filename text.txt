@@ -2782,3 +2782,10 @@ local Tabs = {
     stack = Window:AddTab({ Title = "Stack Auto Farm", Icon = "" }), 
 
 }
+})
+    Tabs.Sh:AddButton({
+        Title = "Teleport Sea 1",
+        Description = "faster teleport to old world with 1 click",
+        Callback = function()            
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
+        end
